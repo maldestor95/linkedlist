@@ -1,0 +1,14 @@
+{
+  "name": "linkedlist",
+  "version": "0.1.0",
+  "description": "linked list classes",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "maldestor95@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^26.4.2"
+  }
+}
