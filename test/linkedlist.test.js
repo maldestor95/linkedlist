@@ -198,13 +198,36 @@ describe("linked list", function () {
         expect(list.getIndex(4)).toEqual(4444)
         expect(list.getIndex(5)).toBe(5)
 
-        let res= list.insertAtIndex(111, -5)
+        let res = list.insertAtIndex(111, -5)
         expect(list.size()).toBe(11)
         expect(res).toBe('cannot access position while inserting')
-        
+
         list.insertAtIndex(111, 100)
         expect(list.size()).toBe(11)
         expect(res).toBe('cannot access position while inserting')
+
+        done()
+    })
+    it("shall remove node at index j of the linkedlist (insertAtIndex)", done => {
+        list = new linkedList([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+        let res = list.removeAtIndex(-5)
+        expect(list.size()).toBe(10)
+        expect(res).toBe('cannot access position while inserting')
+
+        list.removeAtIndex(100)
+        expect(list.size()).toBe(10)
+        expect(res).toBe('cannot access position while inserting')
+
+        list.removeAtIndex(4)
+        expect(list.size()).toBe(9)
+        expect(list.getIndex(3)).toBe(4)
+        expect(list.getIndex(4)).toEqual(6)
+        expect(list.getIndex(5)).toBe(7)
+
+        list= new linkedList([1, 2, 3])
+        list.removeAtIndex(2)
+        expect(list.size()).toBe(2)
+        // console.log(list.print())
 
         done()
     })
