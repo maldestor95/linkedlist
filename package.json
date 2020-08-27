@@ -4,7 +4,8 @@
   "description": "linked list classes",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "testnew": "jest --coverage -o"
   },
   "author": "maldestor95@gmail.com",
   "license": "MIT",
